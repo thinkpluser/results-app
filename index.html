@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+<script>
+$("#ajaxBtn").click(function(){
+	var inputText = $("#testText").val();
+	
+	$.ajax({ type: "POST",
+	url: "https://think-plus.gr/pelates/pages/pizza_gr/system_info.php",
+	data: "testAjax="+inputText,
+	dataType: "html",
+	success: function(html){
+	alert(html);
+	}
+	 });
+});  
+</script>
+
+</body>
+</html>
