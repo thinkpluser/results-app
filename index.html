@@ -9,7 +9,6 @@
 <body>
 <script>
 $(document).ready(function(e) {
-    
 
 var response = '';
 $.ajax({ type: "GET",   
@@ -21,7 +20,7 @@ $.ajax({ type: "GET",
          }
 });
 
-alert(response);
+$('body').append(response);
 
 });
 </script>
