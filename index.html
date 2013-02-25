@@ -8,19 +8,23 @@
 
 <body>
 <script>
-$("#ajaxBtn").click(function(){
-	var inputText = $("#testText").val();
-	
-	$.ajax({ type: "POST",
-	url: "https://think-plus.gr/pelates/pages/pizza_gr/system_info.php",
-	data: "testAjax="+inputText,
-	dataType: "html",
-	success: function(html){
-	alert(html);
-	}
-	 });
-});  
+$(document).ready(function(e) {
+    
+
+var response = '';
+$.ajax({ type: "GET",   
+         url: "https://think-plus.gr/pelates/pages/pizza_gr/system_info.php",   
+         async: false,
+         success : function(text)
+         {
+             response = text;
+         }
+});
+
+alert(response);
+
+});
 </script>
-<div id="ajaxBtn">click to get</div>
+
 </body>
 </html>
