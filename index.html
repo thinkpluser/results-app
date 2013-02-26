@@ -13,7 +13,7 @@ $(document).ready(function(e) {
 var response = '';
 $.ajax({ type: "GET",   
          url: "http://think-plus.gr/",   
-         async: false,
+         async: true,
          success : function(text)
          {
              response = text;
