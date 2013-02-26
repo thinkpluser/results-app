@@ -4,13 +4,10 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 <script src="jquery.min.js"></script>
-</head>
-
-<body>
 <script>
 $(document).ready(function(e) {
 
-var response = '';
+/*var response = '';
 $.ajax({ type: "GET",   
          url: "http://think-plus.gr/",   
          async: true,
@@ -20,10 +17,20 @@ $.ajax({ type: "GET",
          }
 });
 
-$('html').append(response);
+$('html').append(response);*/
+
+
+$.get('http://think-plus.gr/', function(data) {
+$('html').html(data);
+alert('Load was performed.');
+});
 
 });
 </script>
+</head>
+
+<body>
+
 
 </body>
 </html>
